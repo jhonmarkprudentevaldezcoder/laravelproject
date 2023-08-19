@@ -37,11 +37,11 @@
         </div>
         @endif
 
-        <div class="mt-20 md:mt-0 max-w-full mx-auto sm:px-6 lg:px-2">
-            {{-- <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                <img src="  {{ asset('/logo/logo.png') }}" alt="logo" width="100">
-            </div> --}}
-            @include('components/carousel')
+        <div class="mt-20 md:mt-20 max-w-full mx-auto sm:px-6 lg:px-2">
+            <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+                @include('components/carousel')
+            </div>
+
             <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="p-6">
