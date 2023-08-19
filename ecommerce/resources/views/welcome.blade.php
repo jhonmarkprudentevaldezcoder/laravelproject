@@ -134,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="rounded-md p-2 md:p-0 shadow-sm mt-2 flex flex-col md:flex-row justify-between gap-2 ">
+            <div class="rounded-md p-2 md:p-0 shadow-sm mt-2 flex flex-col md:flex-row justify-between gap-1 md:gap-1 ">
 
                 <div
                     class="max-w-full md:max-w-sm bg-white border border-gray-200 rounded-md shadow flex flex-col justify-between">
