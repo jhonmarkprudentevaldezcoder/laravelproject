@@ -10,7 +10,7 @@
 </head>
 
 <body class="antialiased">
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-900 sm:items-center py-4 sm:pt-0">
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-200 sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
         <div
             class=" fixed  top-0 right-0 px-4 py-2  bg-gray-800 w-full flex flex-row  justify-between md:justify-around items-center">
@@ -19,7 +19,7 @@
 
             <div class="flex flex-row md:justify-between items-center">
                 @auth
-                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-200 underline">Dashboard</a>
+                <a href="{{ url('/dashboard') }}" class="text-xl text-gray-200 ">Dashboard</a>
                 @else
                 <a href="{{ route('login') }}"
                     class="text-sm text-gray-200 font-semibold hover:text-amber-500 transition-all ease-in-out delay-75 duration-300">Log
@@ -28,7 +28,6 @@
                 @if (Route::has('register'))
                 <a href="{{ route('register') }}"
                     class="ml-4 text-sm text-gray-200 font-semibold hover:text-amber-500 transition-all ease-in-out delay-75 duration-300">Register</a>
-
                 @endif
                 @endauth
 
@@ -39,7 +38,7 @@
 
         <div class="mt-20 md:mt-20 max-w-full mx-auto sm:px-6 lg:px-2">
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                @include('components/carousel')
+                {{-- @include('components/carousel') --}}
             </div>
 
             <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg">

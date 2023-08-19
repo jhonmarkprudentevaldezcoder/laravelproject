@@ -13,7 +13,7 @@
         @endif
 
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}" class="p-3">
             @csrf
 
             <div>
@@ -33,26 +33,29 @@
                     <x-checkbox id="remember_me" name="remember" />
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
-                @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-                @endif
+
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center flex-col justify-between mt-4">
+                <x-button class=" w-full text-center">
+                    {{ __('Log in') }}
+                </x-button>
+
                 @if (Route::has('password.request'))
-                <a class=" text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                <a class="mt-2 border text-center border-gray-500 p-2 w-full text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     href="{{ route('register') }}">
                     {{-- {{ __('Forgot your password?') }} --}}
                     Register
                 </a>
                 @endif
 
-                <x-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-button>
+                @if (Route::has('password.request'))
+                <a class="mt-2 border w-full text-center border-gray-500 p-2 text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
+                @endif
+
             </div>
         </form>
 
