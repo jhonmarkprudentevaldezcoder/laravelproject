@@ -13,7 +13,7 @@
     <div class="relative flex items-top justify-center min-h-screen bg-gray-900 sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
         <div
-            class=" fixed  top-0 right-0 px-4 py-2  bg-gray-800 w-full flex flex-row  justify-between md:justify-evenly items-center">
+            class=" fixed  top-0 right-0 px-4 py-2  bg-gray-800 w-full flex flex-row  justify-between md:justify-around items-center">
 
             <img src="{{ asset('/logo/logo.png') }}" alt="logo" width="50" class="object-cover">
 
@@ -28,18 +28,20 @@
                 @if (Route::has('register'))
                 <a href="{{ route('register') }}"
                     class="ml-4 text-sm text-gray-200 font-semibold hover:text-amber-500 transition-all ease-in-out delay-75 duration-300">Register</a>
+
                 @endif
                 @endauth
+
             </div>
+
         </div>
         @endif
 
-        <div class="mt-20 md:mt-0 max-w-full mx-auto sm:px-6 lg:px-8">
-            <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-
+        <div class="mt-20 md:mt-0 max-w-full mx-auto sm:px-6 lg:px-2">
+            {{-- <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <img src="  {{ asset('/logo/logo.png') }}" alt="logo" width="100">
-            </div>
-
+            </div> --}}
+            @include('components/carousel')
             <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="p-6">
@@ -151,6 +153,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 </body>
 
 </html>
